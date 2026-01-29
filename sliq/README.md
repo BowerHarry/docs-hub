@@ -29,30 +29,30 @@ Below is a visual tour of most of the in-game assets.
 
 ### App Icon + UI Elements
 
-<img src="Sliq/Assets/Textures/icon.png" width="96"> <img src="Sliq/Assets/Textures/icon-no-background.png" width="96"> <img src="Sliq/Assets/Textures/icon-no-background-no-bear.png" width="96"> <img src="Sliq/Assets/Textures/lever.png" width="72"> <img src="Sliq/Assets/Textures/lever_flip.png" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon-no-background.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon-no-background-no-bear.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/lever.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/lever_flip.png" width="72">
 
 ### Characters + Feedback
 
-<img src="Sliq/Assets/Textures/teddy.png" width="96"> <img src="Sliq/Assets/Textures/teddy-alive.png" width="96"> <img src="Sliq/Assets/Textures/empty-head.png" width="64"> <img src="Sliq/Assets/Textures/filled-head.png" width="64"> <img src="Sliq/Assets/Textures/body.png" width="64"> <img src="Sliq/Assets/Textures/guts.png" width="64"> <img src="Sliq/Assets/Textures/beating-heart.gif" width="64">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/teddy.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/teddy-alive.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/empty-head.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/filled-head.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/body.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/guts.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/beating-heart.gif" width="64">
 
 ### Tiles (Values 0–4)
 
-<img src="Sliq/Assets/Textures/0-tile.png" width="72"> <img src="Sliq/Assets/Textures/1-tile.png" width="72"> <img src="Sliq/Assets/Textures/2-tile.png" width="72"> <img src="Sliq/Assets/Textures/3-tile.png" width="72"> <img src="Sliq/Assets/Textures/4-tile.png" width="72"> <img src="Sliq/Assets/Textures/tile.png" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/0-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/1-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/2-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/3-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/4-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/tile.png" width="72">
 
 ### Boards + UI Screens
 
-<img src="Sliq/Assets/Textures/empty-board.png" width="160">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/empty-board.png" width="160">
 
 ### Industrial Theme Elements
 
-<img src="Sliq/Assets/Textures/pipes.png" width="200"> <img src="Sliq/Assets/Textures/pipes-no-belt.png" width="200">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/pipes.png" width="200"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/pipes-no-belt.png" width="200">
 
 ### Tile Animation GIFs
 
-<img src="Sliq/Assets/Textures/gifs/1-tile-right.gif" width="72">
-<img src="Sliq/Assets/Textures/gifs/2-tile-right.gif" width="72">
-<img src="Sliq/Assets/Textures/gifs/3-tile-right.gif" width="72">
-<img src="Sliq/Assets/Textures/gifs/4-tile-right.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/1-tile-right.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/2-tile-right.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/3-tile-right.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/4-tile-right.gif" width="72">
 
 ### In-game screengrabs
 

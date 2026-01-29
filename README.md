@@ -4,8 +4,7 @@ Welcome to my central documentation hub. While the source code for these project
 ---
 
 ### 📂 Active Projects
-* [**Project Alpha Title**](./project-alpha/README.md) - Brief one-sentence description of what this does.
-* [**Project Beta Title**](./project-beta/README.md) - Brief one-sentence description.
+* [**ClickWheel**](./click-wheel/README.md) - MacOS app for managing and syncing music to legacy iPods.
 
 ---
 > **Note:** If you are interested in collaborating or seeing the source code for any of these projects, please feel free to reach out.

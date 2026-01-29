@@ -49,10 +49,10 @@ Below is a visual tour of most of the in-game assets.
 
 ### Tile Animation GIFs
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/1-tile-right.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/2-tile-right.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/3-tile-right.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/4-tile-right.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/1-tile-left.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/2-tile-left.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/3-tile-left.gif" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/4-tile-left.gif" width="72">
 
 ### In-game screengrabs
 

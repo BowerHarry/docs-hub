@@ -31,32 +31,43 @@ try await service.sync(device: device, tracks: tracks)
 
 ## Compatibility Matrix
 
-Status legend: ✅ supported, ⏳ in progress, ❌ not supported.
+Status legend:
+- ✅ **Tested** — physically verified on hardware
+- 🔵 **Expected** — code implemented, same database format as a tested device
+- 🟡 **Implemented** — code exists but untested on hardware
+- ❌ **Not supported**
 
-| iPod Family | Model | Status | Notes |
+### iPod nano
+
+| Model | Status | DB Format | Checksum | Notes |
+| --- | --- | --- | --- | --- |
+| 1st Gen | 🟡 Implemented | iTunesDB | None | No hash required |
+| 2nd Gen | 🟡 Implemented | iTunesDB | None | No hash required |
+| 3rd Gen | ✅ **Tested** | iTunesDB | Hash58 | Primary development target |
+| 4th Gen | 🔵 Expected | iTunesDB | Hash58 | Identical DB format to 3rd Gen |
+| 5th Gen | 🔵 Expected | iTunesDB | Hash72 | Hash72 implemented, same DB structure |
+| 6th Gen | 🟡 Implemented | HashedDB | HashAB | Different DB format (multitouch) |
+| 7th Gen | 🟡 Implemented | HashedDB | HashAB | Different DB format (multitouch) |
+
+### iPod Classic
+
+| Model | Status | DB Format | Checksum | Notes |
+| --- | --- | --- | --- | --- |
+| 1st–5.5 Gen | ❌ | — | — | Older DB format, no hash |
+| 6th Gen (80GB/160GB) | 🔵 Expected | iTunesDB | Hash58 | Same format as Nano 3rd/4th Gen |
+| 7th Gen (120GB/160GB Thin) | 🔵 Expected | iTunesDB | Hash58 | Same format as Nano 3rd/4th Gen |
+
+### iPod shuffle
+
+| Model | Status | DB Format | Notes |
 | --- | --- | --- | --- |
-| iPod mini | 1st Gen | ❌ | |
-| iPod mini | 2nd Gen | ❌ | |
-| iPod classic | 1st Gen | ❌ | |
-| iPod classic | 2nd Gen | ❌ | |
-| iPod classic | 3rd Gen | ❌ | |
-| iPod classic | 4th Gen (Mono) | ❌ | |
-| iPod classic | 4th Gen (Color/Photo) | ❌ | |
-| iPod classic | 5th Gen (Video) | ❌ | |
-| iPod classic | 5.5 Gen (Video) | ❌ | |
-| iPod classic | 6th Gen | ❌ | |
-| iPod classic | 7th Gen | ❌ | |
-| iPod shuffle | 1st Gen | ❌ | |
-| iPod shuffle | 2nd Gen | ❌ | |
-| iPod shuffle | 3rd Gen | ❌ | |
-| iPod shuffle | 4th Gen | ❌ | |
-| iPod nano | 1st Gen | ❌ | |
-| iPod nano | 2nd Gen | ✅ | |
-| iPod nano | 3rd Gen | ❌ | |
-| iPod nano | 4th Gen | ❌ | |
-| iPod nano | 5th Gen | ❌ | |
-| iPod nano | 6th Gen | ❌ | |
-| iPod nano | 7th Gen | ❌ | |
+| 1st–4th Gen | ❌ | iTunesSD | Different format entirely |
+
+### iPod mini
+
+| Model | Status | Notes |
+| --- | --- | --- |
+| 1st/2nd Gen | ❌ | Older DB format |
 
 ## Notes
 This library intentionally excludes device discovery and eject/mount logic. Host applications are responsible for identifying devices and providing a mount path.

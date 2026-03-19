@@ -14,6 +14,7 @@ ClickWheel is a macOS app for managing and syncing music to legacy iPods (Classi
 - macOS 13 or later
 - Xcode 15 or later
 - Access to the Music app library (iTunesLibrary framework)
+- **ffmpeg** (recommended) — used by the sync engine for reliable MP3 transcoding (e.g. AAC/M4A → MP3 for **iPod nano 1st gen**, which only plays MP3 among lossy formats). Install with Homebrew: `brew install ffmpeg`.
 
 ## Repository layout
 

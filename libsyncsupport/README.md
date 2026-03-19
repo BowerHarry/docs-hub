@@ -11,6 +11,7 @@ Low-level Swift sync engine for iPod-style devices. Provides database writing, m
 ## Requirements
 - macOS 13+
 - Swift 5.9+
+- **ffmpeg** (recommended for MP3 transcoding): install with Homebrew (`brew install ffmpeg`). The sync engine prefers `ffmpeg` + `libmp3lame` for AAC/M4A → MP3; it may fall back to `afconvert` when `ffmpeg` is unavailable, but `ffmpeg` is the reliable path on modern macOS for many library sources.
 
 ## Usage
 This package exposes `SyncService`, `SyncDevice`, and `SyncTrack` in the `LibSyncSupport` module.
@@ -41,8 +42,8 @@ Status legend:
 
 | Model | Status | DB Format | Checksum | Notes |
 | --- | --- | --- | --- | --- |
-| 1st Gen | 🟡 Implemented | iTunesDB | None | No hash required |
-| 2nd Gen | 🟡 Implemented | iTunesDB | None | No hash required |
+| 1st Gen | ✅ **Tested** | iTunesDB | None | MP3-only playback; AAC/M4A sources are transcoded to MP3 automatically. **ffmpeg** recommended for reliable transcoding on many systems. |
+| 2nd Gen | ✅ **Tested** | iTunesDB | None | Physically verified working |
 | 3rd Gen | ✅ **Tested** | iTunesDB | Hash58 | Primary development target |
 | 4th Gen | 🔵 Expected | iTunesDB | Hash58 | Identical DB format to 3rd Gen |
 | 5th Gen | 🔵 Expected | iTunesDB | Hash72 | Hash72 implemented, same DB structure |

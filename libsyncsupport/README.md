@@ -50,13 +50,14 @@ Status legend:
 | 6th Gen | 🟡 Implemented | HashedDB | HashAB | Different DB format (multitouch) |
 | 7th Gen | 🟡 Implemented | HashedDB | HashAB | Different DB format (multitouch) |
 
-### iPod Classic
+### iPod Classic / full-size iPod
 
 | Model | Status | DB Format | Checksum | Notes |
 | --- | --- | --- | --- | --- |
-| 1st–5.5 Gen | ❌ | — | — | Older DB format, no hash |
-| 6th Gen (80GB/160GB) | 🔵 Expected | iTunesDB | Hash58 | Same format as Nano 3rd/4th Gen |
-| 7th Gen (120GB/160GB Thin) | 🔵 Expected | iTunesDB | Hash58 | Same format as Nano 3rd/4th Gen |
+| 1st–4th Gen (click wheel) | ❌ | — | — | Older DB layouts not implemented |
+| **5th Gen (iPod Video)** | 🔵 Expected | iTunesDB | **None** | Host should set `SyncDevice.modelName` to **`iPod Video`** (USB PID **0x1209**). Distinct from 6G Classic: **no hash58**. Artwork uses 100×100 / 200×200 (`mhni` family). |
+| 6th Gen Classic (80GB/160GB) | 🔵 Expected | iTunesDB | Hash58 | Same format family as Nano 3rd/4th Gen; `modelName` **`iPod Classic`** (USB PID **0x1261**) |
+| 7th Gen Classic (120GB/160GB Thin) | 🔵 Expected | iTunesDB | Hash58 | Same as 6th Gen Classic |
 
 ### iPod shuffle
 
@@ -72,4 +73,6 @@ Status legend:
 
 ## Notes
 This library intentionally excludes device discovery and eject/mount logic. Host applications are responsible for identifying devices and providing a mount path.
+
+**`modelName` matters:** Checksums and artwork tables are selected from `SyncDevice.modelName`. **iPod Video (5th gen)** and **iPod Classic (6th gen)** must not share the same string — use **`iPod Video`** vs **`iPod Classic`** as in ClickWheel’s USB PID mapping.
 

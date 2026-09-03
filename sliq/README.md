@@ -1,66 +1,60 @@
 # SLIQ
 
-SLIQ is a tile-based puzzle game where you swipe numbered tiles across a rotating board to score by matching tile colors with the border. It blends strategy with timing as the colored border rotates and new tiles drop in.
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon-no-background-no-bear.png" width="140">
 
-## Game Instructions
+SLIQ is a tile-based puzzle game for iOS. Numbered tiles pile up on a board
+ringed by a coloured border that keeps rotating. Swipe a tile out through an
+edge of its own colour and it scores — but every swipe costs it a point, so the
+longer you take to line one up, the less it is worth.
 
-- **Goal**: Reach the target score before time runs out or the board fills up.
-- **Tiles**: Values 1–4. Each swipe left/right moves the tile and reduces its value by 1.
-- **Scoring**: When a tile’s color matches the border color beneath it, it drops through and scores points equal to its current value.
-- **Rotation**: The border rotates clockwise on a timer. You can also rotate manually using the lever.
-- **New Tiles**: Fresh tiles drop in when the board rotates.
-- **Stars**: Levels award 0–3 stars based on performance (roughly 33%, 65%, and 100% of target).
-- **Progression**: 3 bundles (Easy/Medium/Hard), 12 levels each, with star-based unlocks. Free Play unlocks after completing all 36 levels.
+## How to play
 
-## How To Run
+- **Tiles** carry a value of 1–4. That number is both the points it is worth and
+  the moves it has left. Swipe it left or right and it drops one.
+- **Score** by matching colours. Push a tile through a side border of its own
+  colour, or let it land on a matching bottom edge and it falls through by
+  itself. Either way it scores its current value, with no move cost.
+- **The border rotates** on a timer, bringing a fresh edge in at the top and
+  dropping new tiles in behind it. The valve on the right turns it early — handy
+  when nothing on the board is playable, but it costs you a wave of new tiles.
+- **A tile worn down to 0** is dead weight. It cannot be moved or scored; it only
+  clears by falling through the bottom row.
+- **You lose** when a tile comes to rest in the top row.
+- **Stars** are awarded at 33%, 65% and 100% of the level's target, so a strong
+  loss still earns progress.
 
-1. Open `Sliq.xcodeproj` in Xcode.
-2. Select an iOS Simulator (or device) and build/run.
+## Progression
 
-## Project Layout
+Three bundles — Easy, Medium and Hard — of twelve levels each. Medium opens at
+18 stars in Easy and Hard at 36. Collect 36 stars overall to unlock **Free
+Play**: an endless score attack you configure yourself, with a Game Center
+leaderboard for runs on the ranked preset.
 
-- `Sliq/Scenes/` — Menu, level select, settings, gameplay scenes
-- `Sliq/Models/` — Board, tiles, border system, game state
-- `Sliq/Assets/Textures/` — Core art assets (tiles, UI, characters)
+## Screens
 
-## Asset Showcase
+<img src="appstore/01-menu.png" width="200"> <img src="appstore/02-gameplay.png" width="200"> <img src="appstore/03-levels.png" width="200">
 
-Below is a visual tour of most of the in-game assets.
+<img src="appstore/04-bundles.png" width="200"> <img src="appstore/05-freeplay.png" width="200"> <img src="appstore/06-celebration.png" width="200">
 
-### App Icon + UI Elements
+## Art
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon-no-background.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/icon-no-background-no-bear.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/lever.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/lever_flip.png" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/0-tile.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/1-tile.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/2-tile.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/3-tile.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/4-tile.png" width="64">
 
-### Characters + Feedback
+The five tile faces, values 0 to 4.
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/teddy.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/teddy-alive.png" width="96"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/empty-head.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/filled-head.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/body.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/guts.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/beating-heart.gif" width="64">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/1-horizontal-edge.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/2-horizontal-edge.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/3-horizontal-edge.png" width="64"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/4-horizontal-edge.png" width="64">
 
-### Tiles (Values 0–4)
+The border edges a tile has to match.
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/0-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/1-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/2-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/3-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/4-tile.png" width="72"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/tile.png" width="72">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Bear/bear-idle.png" width="80"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Bear/bear-lean.png" width="80"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Bear/bear-bite.png" width="80"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Bear/bear-settle.png" width="80">
 
-### Boards + UI Screens
+Every tile you score travels the pipes below the board and is eaten by the bear,
+who grows as you close on the target.
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/empty-board.png" width="160">
+<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/pipes.png" width="320">
 
-### Industrial Theme Elements
+## Building it
 
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/pipes.png" width="200"> <img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/pipes-no-belt.png" width="200">
-
-### Tile Animation GIFs
-
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/1-tile-left.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/2-tile-left.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/3-tile-left.gif" width="72">
-<img src="https://github.com/BowerHarry/sliq-iOS/blob/main/Sliq/Assets/Textures/gifs/4-tile-left.gif" width="72">
-
-### In-game screengrabs
-
-#### Landing screen
-<img src="https://github.com/user-attachments/assets/1fa967ef-1381-47f8-b504-65dcf3311f95" width="200">
-
-#### Level select
-<img width="200" height="500" alt="IMG_3231" src="https://github.com/user-attachments/assets/a046598f-0050-4780-bf12-7625218f21b5" />
-
-#### Gameplay
-<img src="https://github.com/user-attachments/assets/3c45a873-6fcd-4301-8b58-7265683e1366" width="200">
+Open `Sliq.xcodeproj` and run the **Sliq** scheme on any portrait iPhone
+simulator. Developer documentation lives beside this file — start with
+[the repository README](../README.md).

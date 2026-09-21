@@ -25,10 +25,15 @@ longer you take to line one up, the less it is worth.
 
 ## Progression
 
-Three bundles — Easy, Medium and Hard — of twelve levels each. Medium opens at
-18 stars in Easy and Hard at 36. Collect 36 stars overall to unlock **Free
-Play**: an endless score attack you configure yourself, with a Game Center
-leaderboard for runs on the ranked preset.
+Three bundles — Easy, Medium and Hard — of twelve levels each, and one
+currency: bear heads, 36 to a bundle and 108 in the game. Medium costs 36
+earned anywhere, Hard and **Free Play** cost 72. Free Play is an endless score
+attack you configure yourself, with a Game Center leaderboard for runs on the
+ranked preset.
+
+Within a bundle each level opens with at least one head on the one before it,
+which is what the pipe snaking through the level screen draws: the flow stops
+where you have.
 
 ## Screens
 

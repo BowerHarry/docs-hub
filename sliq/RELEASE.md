@@ -209,7 +209,7 @@ Game Center identities are handled by Apple, not collected by the app.
 
 | File | Screen |
 |---|---|
-| `01-menu.png` | Title screen with falling tiles |
+| `01-menu.png` | Title screen over the pipe network |
 | `02-gameplay.png` | Mid-level, tiles riding the belt to the bear |
 | `03-levels.png` | Level select showing 22/36 bear heads earned |
 | `04-bundles.png` | Bundle select with unlock requirements |

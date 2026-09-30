@@ -17,8 +17,9 @@ longer you take to line one up, the less it is worth.
 - **The border rotates** on a timer, bringing a fresh edge in at the top and
   dropping new tiles in behind it. The valve on the right turns it early — handy
   when nothing on the board is playable, but it costs you a wave of new tiles.
-- **A tile worn down to 0** is dead weight. It cannot be moved or scored; it only
-  clears by falling through the bottom row.
+- **A tile worn down to 0** is dead weight, for good. It cannot be moved, it
+  cannot score and it never leaves the board — it just sits in the way. Think
+  twice before moving a 1.
 - **You lose** when a tile comes to rest in the top row.
 - **Stars** are awarded at 33%, 65% and 100% of the level's target, so a strong
   loss still earns progress.

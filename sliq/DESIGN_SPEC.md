@@ -242,9 +242,17 @@ The same sign, smaller, for one level of one bundle (6.3): 84 × 60, radius 12,
 - The number at 24 heavy across the top, the three bear heads under it at 15.
   An unearned head is drawn in ink, which on an accent face reads as a blot
   rather than an empty socket, so it is taken back to 35%.
-- The category disc (6.3) **replaces the top-right bolt** rather than sitting
-  next to it. A sign this size has one corner spare, not two things to put in
-  it.
+- The category (6.3) is **painted onto the four bolts**, not carried by a disc.
+  It was a coloured badge in the top-right corner, which cost the sign one of
+  its four fixings and put a second small round object on a plate 84 points
+  wide — a number, three heads and a badge, on something the size of a stamp.
+  Once the legend at the foot of the screen is what decodes the thing, the
+  colour says as much as the glyph did, so the sign keeps all four corners and
+  gains no new object at all. Painted heads go to 2.7 pt with an `ink` outline,
+  against 2 pt and unoutlined for a plain one, so they read as hardware someone
+  chose the colour of rather than as four stray dots.
+- Locked signs keep plain bolts. The category is a hint about a level that
+  cannot be opened yet, which is why it was never badged either.
 - Locked: the same grey as a locked bundle sign, and a padlock where the heads
   would be. Three empty sockets would say it twice, and would read as a level
   played badly rather than one not yet reached.
@@ -305,6 +313,14 @@ and the three controls on a shutter (5.8: 68 pt centre, 46 pt sides). Never smal
 than a 44 pt target. No handwheel spokes — a wheel says "turn me", and this is a press.
 - Seven marks, one 3.2 pt pen scaled with the disc: back, pause, play, next (play up
   against a bar), restart, home, lock.
+- **restart** is three quarters of a turn with its head on the tangent at the end the
+  stroke starts from. Drawn upright and parked on top of the arc, the head's apex
+  buried itself in the ring and the base's top corner became the sharpest thing on
+  the glyph: it read as a pennant on a stick.
+- **back** is the one mark not on its geometric centre. A chevron's ink is all on the
+  side its arms open to, so a left-pointing one that measures dead centre reads as
+  pushed right; it is nudged 1.4 pt (at 32 pt) the other way. The rest are symmetric
+  and need no help.
 - A **locked** disc is duller hardware (`#2A5B69`, mark `#9DB5B4`), never a translucent
   one — a shutter's seams run behind it. It refuses a tap with the valve's flicker.
 
@@ -322,7 +338,25 @@ than a 44 pt target. No handwheel spokes — a wheel says "turn me", and this is
 The square card a level used to be. Kept here for the one rule that outlived
 it: the category chip is a 20 pt circle with a value-colour fill and an **ink**
 glyph, one per level (its primary category), and the five categories map onto
-the five palette colours — they may not introduce their own.
+palette colours — they may not introduce their own.
+
+**Which colour goes to which category is decided by how often it is shown**, not
+by the order of the enum. Across the 36 levels the category a sign displays is
+`speed` 18 times and `rotation` 16 — 34 of the 36 — with `chaos` and
+`complexity` once each and `target` never. So those two carry nearly the whole
+job of telling one sign from another, and they take the furthest-apart pair the
+palette offers: `gold` and `sky`, ΔE2000 **67.5**, holding at 55 or better under
+simulated protanopia, deuteranopia and tritanopia. They were `gold` and `amber`
+— 17.6, and **7.1 to a deuteranope**, which is to say the same colour on the two
+categories that are almost the whole screen. That was survivable while a glyph
+sat on top of the colour; it stopped being survivable when the badge became four
+painted screw heads (5.2d).
+
+The rest follow: `cherry` for a messy mix, `leaf` for crowded, `bearBrown` for
+the high target nothing currently shows. Four colours that all survive every
+colour-vision deficiency **are not available from this palette** — the best any
+arrangement of it manages is ΔE 15.7 — which is why the legend at the foot of
+the level screen (6.3) is a fallback rather than a nicety.
 
 ### 5.6 Progress bar
 - Track: full pill, height 12, `teal900` fill.
@@ -407,11 +441,30 @@ watches the old board vanish. LEVELS and MENU leave it down and crossfade — th
 thing seen of a level is a shut hatch.
 
 ### 5.9 Coach mark (tutorial)
-- `cream` speech bubble (radius 16, `ink` stroke) with bear-head icon, `body` text in `ink`.
-- A pointer wedge under the bubble, aimed at the cell the step is about and
-  clamped to stay within the bubble's width.
-- A dimmed spotlight (`teal900` at 34%) over everything except that cell, drawn
-  as four panels around the hole rather than an inverted mask.
+- `cream` speech bubble (radius 16, `ink` stroke) with bear-head icon and the
+  step's sentence in `ink` at 14 demiBold on a 20 pt pitch. The copy is **one
+  string per step and the bubble wraps it**, so rewording a step is editing a
+  sentence — nobody hand-breaks lines. It lives in the **HUD's band above the
+  board** — the tutorial has no header — so neither the board nor the factory
+  under it is ever covered; that band holds five lines, and the longest step
+  uses all five.
+- A pointer wedge **under** the bubble, aimed at whatever the step is about
+  and clamped to stay within the bubble's width. It follows a subject that
+  moves mid-step.
+- **The highlight is one window with one frame.** Everything but the subject is
+  dimmed (`teal900` at 42%) through a round-cornered window (radius 12) cut
+  close round it — a tile, a cell and its floor, the top row, the valve, the
+  bear, the whole factory. The window's frame says what kind of step it is:
+  `cream` at 60%, 1.5 pt and still for *look at this*; `gold`, 2.5 pt and
+  breathing for *do something to this*. A refused swipe kicks the frame.
+  It was four rectangles butted up round a square hole, with a separate pulsing
+  ring inside it on swipe steps: hard corners cutting across tile corners and
+  pipe flanges, an edge with nothing to say it was deliberate, and two outlines
+  a few points apart saying the same thing. The dimming is one shape now — the
+  scene's rectangle with the window wound the other way — and since it lies
+  over the whole scene, the scene forwards a swipe step's touches to the board.
+- Read-and-tap steps carry "Tap to continue · n of N", so a lesson this long
+  says how long it is.
 
 ### 5.10 Drawn plumbing (`Plumbing`)
 
@@ -851,8 +904,10 @@ Top → bottom:
     tick (scale 1→1.4→1, `gold`).
 - Board block: border edges, grid, tiles.
 - **Rotation countdown**: a 13 pt **pressure gauge** bolted to the ring's right
-  face — a capped pipe with `pipeBlue` collars and the ink outline, board height,
-  draining as the next auto-rotation approaches. Bundle accent, switching to
+  face — a capped pipe with `pipeBlue` collars and the ink outline, stopping
+  11 pt short of the ring at each end so its top collar clears the direction
+  cog below (at board height the two sat half a point apart on a
+  counter-clockwise level), draining as the next auto-rotation approaches. Bundle accent, switching to
   `cherry` in the final fifth. While the walls are actually turning it holds full
   and dims to 30%, which is also the input-locked state. A rotation flashes the
   gauge as it refills, so the countdown the valve just spent visibly comes back.
@@ -861,16 +916,55 @@ Top → bottom:
   one tick, one light knock and a single pulse of the gauge, armed once per
   rotation window. The colour change is for eyes that are on the gauge; a player's
   eyes are supposed to be on the board.
+- **Rotation direction**: a 17 pt **cog** (`CogNode`) bolted to a top corner of
+  the ring. It answers the one question the board never used to: which way are
+  the walls about to go. It answers it twice, and the first answer is free —
+  **which corner it is on**. A rotation always feeds the fresh edge in at the
+  top whichever way the ring turns, so "new wall at the top" is not a cue; what
+  direction decides is which top corner that edge slides in from, and which one
+  shreds the spent edge on its way past. Clockwise, both are the top-left.
+  Counter-clockwise, the top-right. So a still frame already says it. Then
+  **which way it turns**: 90° per rotation, in the ring's own direction, on the
+  ring's own curve and settle — a true ratio, not a decorative spin, since the
+  ring turns 90° too. Six teeth, not eight: at eight a quarter turn is two whole
+  pitches and leaves the wheel in a pose identical to the one it started in, so
+  the tick was invisible. A gear rather than an arrow, because an arrow is a
+  diagram and everything else on this screen is the plant. A level whose
+  `rotationPattern` is `.none` never builds one — there is no off state to draw.
 - Illustration block (`FactoryNode`): pipes, the valve wheel, the funnel, the conveyor and
   the bear (who grows with progress). **The valve on the right rotates the board early** —
   a real trade, since it also costs a spawn wave and restarts the countdown. It replaced
-  the old lever, which is gone.
+  the old lever, which is gone. The wheel turns on **every** rotation and runs for exactly
+  as long as the belt does, not only on the ones the player asked for: it is the thing
+  that drives the ring, and a ring that moved while the wheel stood still said the turn
+  had come from somewhere off-screen.
 - **No floating "+N".** The score module, the progress bar and the bear filling
   up are the feedback for a score; a number flying off the board on top of them
   was one channel too many.
 - The border edge a scoring tile pushes through **flexes** and springs back, so a
   score reads as something that happened to the board rather than only to the
   tile that vanished. Scaled off the ring's thickness.
+- **How a batch is scheduled** (`BoardNode.apply`). Every event the engine emits
+  is placed by what it actually depends on — the column it is in, the tile it
+  lands on, the ring — and on nothing else. Falls in different columns start
+  together; a stack falls as a stack (a tile landing on a *falling* tile starts
+  with it, one landing on a tile that *slid in* waits for the slide); a swipe
+  starts at once, queued only behind what is still moving in the two columns it
+  touches. It was one cursor for the whole board, advanced by every event in
+  turn: eight columns dropping one row started 72 ms apart, so gravity
+  sputtered and then piled up, and a second swipe waited half a second for the
+  first one's cascade to finish before anything moved. The Hard 12 motion
+  profile went from sputter–gap–pile-up over 1.7 s to continuous motion over
+  1.05 s, with no change to any duration.
+- **The input lock after a rotation** lifts when the ring has turned and the
+  last fresh tile has been *launched*, not landed — the border animation plus
+  0.12 s per spawn, which is what the balance simulator always modelled. The
+  shipped lock had run to the last landing, ~0.85 s longer than that on Easy
+  and a quarter of the play window on Hard. Tiles still falling when the lock
+  lifts can be swiped; the slide starts from wherever the tile is.
+- **A swipe fires at 24 pt of travel**, not when the finger lifts. Detected on
+  the lift, a flick registered late by however long the finger was still
+  moving — most of the gesture, on a fast one.
 
 ### 6.7 Pause and game over
 
@@ -916,11 +1010,51 @@ Every one is the shutter (5.8). What differs is the paint and which marks the di
   reaction in the plant.
 
 ### 6.8 Tutorial
-Scripted level using coach marks (5.9): swipe to move → value drops per move → match the
-border color to score → the walls rotate on their own and drop fresh tiles in → a matching
-bottom edge scores by itself → don't fill the board.
-Skippable at every step ("Skip" text link, top-right). Offered automatically on first
-launch after splash; always available from the menu.
+A scripted lesson using coach marks (5.9), on a board the size and place of the
+real one with **the factory hung under it** — the valve and the bear are part
+of what is being taught. One fact per step, in the order a new player needs
+them. Read steps wait for a tap; action steps wait for the real thing, refuse
+everything else, and **move on by themselves** once it has played out:
+
+1. welcome to the factory; tiles are pumped onto the board; help from a … bear?
+2. the number on a tile is how many times it can move — *swipe a 4*
+3. it has 3 moves now, and it changed from blue to red
+4. each number always matches the same colour; four tiles in the bubble show it
+5. scoring is leaving through a wall of the same colour — so think ahead
+6. a 4 two moves from the wall arrives as an orange 2 — *swipe twice*
+7. orange tile, orange wall — *push it through*
+8. did that bear just … eat the tile? — **held until he has**: a scored tile
+   takes about four seconds to reach him by pipe and belt, so the factory is lit
+   while it travels and the step appears a beat after the bite
+   (`FactoryNode.onBearAte`). He also grows on the bite here, not on the score,
+   so "he even seemed to get a bit larger" is what the player just watched.
+9. careful with 1s — *swipe one*
+10. a 0 is dead: never moves, never scores, sits in the way for good
+11. the walls don't wait; watch the floor under that 2 — the 2 is lit, and the
+    walls turn **only once the player taps**, so they are looking at the right
+    cell when it happens
+12. the floor turned orange, so the 2 fell through and scored on its own
+13. the valve turns the walls early, and costs a wave — *turn it*
+14. only one way to lose: a tile at rest in the top row
+15. it is difficult — tactics, luck, speed; clear the levels, unlock the ranked
+    leaderboard
+
+It was six steps on a bare board, and what people handed the game could not
+work out was exactly what it said in one line each or not at all: that the
+number is a move count, that moving spends it, that the colour *is* the number,
+and that a 1 is one swipe from dead. Steps 2–7 exist to make those four things
+happen in the player's own hands, in that order, before anything else is said.
+
+The board is scripted so every demonstration is deterministic: the mover goes
+right so the 1 keeps a cell to move into; the scorer leaves through `right[1]`,
+which a clockwise turn then makes the floor under the waiting 2; the bottom
+edge matches nothing that will stand on it before that turn.
+
+The direction cog (6.6) is on this board and the lesson does not mention it.
+
+Skippable at every step ("Skip", top-right). Offered automatically on first
+launch after splash; always available from the menu. `-SLIQ_TUTORIAL_STEP n`
+opens it at step n by replaying the earlier steps on the engine.
 
 
 ### 6.9 Best scores
@@ -1049,6 +1183,44 @@ without being told anything.
   the engine's own fields read straight back; the sixth, the tile mix, is named
   by what a player perceives about a mix — whether dead 0-tiles turn up in it,
   and how often.
+
+### 6.12 Origins
+
+Settings → About → Origins. What is left of the first two versions of the
+game, in the order they happened: the 2019 note, the 2020 text game, the 2024
+Kivy build, the project lost after it, and the current one. A museum, not a
+changelog.
+
+- **Nothing is redrawn.** The note is the note. The 2020 game was text, so it
+  is text, in Menlo (`FontName.mono`, exhibit content only — the Courier ban in
+  §3 stands for the interface). The 2024 build was pixels on `#F5F5F5`
+  (`archiveGrey`), so it is those pixels, on that grey, captured by running the
+  old code — see `docs/origins/README.md` for how. A frame around an exhibit
+  would be a frame designed in 2026; there is none. Captures get a 1.5 pt ink
+  edge only because today's game, teal on this teal wall, otherwise has none.
+- **Only the exhibits have colour.** The wall is the header pipe, the play
+  history's section rule (6.10) with a year for a name, the scroll gauge and
+  the floor run: teal, cream, pipe blue. The terminal's black and the 2024 grey
+  read as foreign objects, which is what they are.
+- **Captions say one thing each** and never repeat the line of dates under
+  the year. Each can be cut without breaking its neighbour.
+- **The gauge is the timeline.** A collar on the tube where each year starts,
+  with the year to its left; the top of the charge meets the collar as that
+  year's header reaches the top of the window. No second instrument.
+- **The 2020 session plays.** Empty until it scrolls into view, then typed
+  back out: output lands in blocks the way a program prints, the player's side
+  a key at a time, ending on the game's own `NO TILE SELECTED`. Once, never on
+  repeat; still under Reduce Motion. Its height is reserved from the start so
+  typing moves nothing but itself.
+- **The lost project is an empty frame** — a rectangle in `teal900` the size
+  of the captures above it, with the author's own words under it. The only
+  exhibit that is not a recovered artefact, because there is nothing to recover.
+- **The tally is counted, not typed.** `scripts/origins-tally.sh` counts lines
+  of Swift and `@Test`s on every build and writes `OriginsTally.json` into the
+  bundle; a build without the file leaves those lines out rather than showing a
+  number that was true once.
+- Reached from one more `linkRow` in ABOUT, directly above the credit line, and
+  back lands on ABOUT rather than the menu.
 
 ---
 

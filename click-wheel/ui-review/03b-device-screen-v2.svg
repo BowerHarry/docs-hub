@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 470" font-family="-apple-system, 'SF Pro Text', system-ui, sans-serif">
+  <style>
+    .lbl{font-size:13px;font-weight:700;fill:#333}
+    .note{font-size:11px;fill:#555}
+    .name{font-size:15px;font-weight:700;fill:#222}
+    .h{font-size:12px;font-weight:600;fill:#333}
+    .t{font-size:11px;fill:#333}
+    .m{font-size:11px;fill:#7a7a7a}
+    .btn{font-size:13px;font-weight:600;fill:#fff}
+    .good{font-size:10px;fill:#2e7d32;font-weight:700}
+    .opt{font-size:11px;font-weight:700;fill:#333}
+    .conn{font-size:11px;fill:#2e7d32;font-weight:600}
+  </style>
+  <rect width="720" height="470" fill="#f4f4f4"/>
+  <text x="30" y="30" class="lbl">DEVICE PAGE — revised</text>
+  <text x="196" y="30" class="note">one pane · no boxed “Sync” section · button reads “Sync” · small glyph</text>
+
+  <!-- ===== main single pane ===== -->
+  <rect x="30" y="46" width="410" height="400" rx="6" fill="#ffffff" stroke="#999"/>
+  <rect x="30" y="46" width="410" height="400" rx="6" fill="#fff" stroke="#cccccc"/>
+
+  <!-- header: glyph + name (left)  ·  Connected (right) -->
+  <rect x="48" y="66" width="34" height="34" rx="3" fill="#eceef0" stroke="#c6c6c6"/>
+  <rect x="56" y="72" width="18" height="22" rx="2" fill="#cfd4d8"/>
+  <text x="94" y="82" class="name">iPod Classic</text>
+  <text x="94" y="100" class="m">Video 5th gen · 512 GB</text>
+  <!-- Option A (recommended): status top-right of header -->
+  <circle cx="360" cy="78" r="4" fill="#45a05a"/>
+  <text x="370" y="82" class="conn">Connected</text>
+
+  <!-- storage -->
+  <rect x="48" y="126" width="374" height="10" fill="#ececec" stroke="#d8d8d8"/>
+  <rect x="48" y="126" width="92" height="10" fill="#4d8cc7"/>
+  <text x="48" y="156" class="m">43.8 GB used of 512 GB · 2,584 songs</text>
+  <text x="48" y="176" class="m">Last synced: Entire Library · today 15:25</text>
+
+  <!-- light divider (NOT a new boxed section, NO "Sync" heading) -->
+  <line x1="30" y1="200" x2="440" y2="200" stroke="#e6e6e6"/>
+
+  <!-- profile selector, flowing -->
+  <text x="48" y="230" class="h">Profile</text>
+  <rect x="48" y="240" width="374" height="26" rx="3" fill="#fff" stroke="#bbb"/>
+  <text x="60" y="257" class="t">Entire Library</text>
+  <text x="410" y="257" class="m">▾</text>
+  <text x="48" y="288" class="m">2,584 songs · 43.8 GB · 3 playlists</text>
+
+  <!-- Sync button -->
+  <rect x="48" y="398" width="374" height="32" rx="3" fill="#4d8cc7" stroke="#2e6aa8"/>
+  <text x="235" y="419" text-anchor="middle" class="btn">Sync</text>
+
+  <text x="48" y="330" class="good">no “Sync” header, no second box — it just flows under the device info</text>
+
+  <!-- ===== Connected-tag options ===== -->
+  <text x="470" y="66" class="opt">“Connected” — pick a position</text>
+
+  <!-- Option A -->
+  <text x="470" y="96" class="note" font-weight="700">A · top-right (shown above) ✓ rec</text>
+  <rect x="470" y="104" width="222" height="52" rx="3" fill="#fff" stroke="#cccccc"/>
+  <rect x="482" y="116" width="24" height="24" rx="3" fill="#eceef0" stroke="#c6c6c6"/>
+  <text x="514" y="126" class="name" font-size="13">iPod Classic</text>
+  <text x="514" y="140" class="m">Video 5G · 512 GB</text>
+  <circle cx="648" cy="122" r="4" fill="#45a05a"/><text x="658" y="126" class="conn" font-size="10">Conn.</text>
+
+  <!-- Option B -->
+  <text x="470" y="188" class="note" font-weight="700">B · inline dot on the name line</text>
+  <rect x="470" y="196" width="222" height="52" rx="3" fill="#fff" stroke="#cccccc"/>
+  <rect x="482" y="208" width="24" height="24" rx="3" fill="#eceef0" stroke="#c6c6c6"/>
+  <text x="514" y="218" class="name" font-size="13">iPod Classic</text>
+  <circle cx="610" cy="214" r="4" fill="#45a05a"/>
+  <text x="514" y="232" class="m">Connected · Video 5G · 512 GB</text>
+
+  <!-- Option C -->
+  <text x="470" y="280" class="note" font-weight="700">C · status pill under the name</text>
+  <rect x="470" y="288" width="222" height="58" rx="3" fill="#fff" stroke="#cccccc"/>
+  <rect x="482" y="300" width="24" height="24" rx="3" fill="#eceef0" stroke="#c6c6c6"/>
+  <text x="514" y="310" class="name" font-size="13">iPod Classic</text>
+  <text x="514" y="324" class="m">Video 5G · 512 GB</text>
+  <rect x="514" y="330" width="70" height="16" rx="3" fill="#eaf3ea" stroke="#bcd9bc"/>
+  <circle cx="524" cy="338" r="3" fill="#45a05a"/><text x="532" y="342" class="conn" font-size="10">Connected</text>
+
+  <text x="470" y="378" class="note">A keeps it quiet &amp; aligned; B is most compact;</text>
+  <text x="470" y="392" class="note">C reads most clearly as a “state”. Your call.</text>
+</svg>

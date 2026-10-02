@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" font-family="-apple-system, 'SF Pro Text', system-ui, sans-serif">
+  <style>
+    .lbl{font-size:13px;font-weight:700;fill:#333}
+    .note{font-size:11px;fill:#555}
+    .name{font-size:15px;font-weight:700;fill:#222}
+    .h{font-size:12px;font-weight:600;fill:#333}
+    .sec{font-size:11px;font-weight:700;fill:#8a8a8a;letter-spacing:.06em}
+    .t{font-size:11px;fill:#333}
+    .m{font-size:11px;fill:#7a7a7a}
+    .k{font-size:11px;fill:#888}
+    .btn{font-size:13px;font-weight:600;fill:#fff}
+    .link{font-size:11px;fill:#3b7cb8;font-weight:600}
+    .conn{font-size:11px;fill:#2e7d32;font-weight:600}
+    .good{font-size:10px;fill:#2e7d32;font-weight:700}
+  </style>
+  <rect width="720" height="540" fill="#f4f4f4"/>
+  <text x="30" y="28" class="lbl">DEVICE PAGE — v3</text>
+  <text x="164" y="28" class="note">Connected = A (top-right) · version/serial kept in a quiet Details block · ⚙ Sync settings → sheet</text>
+
+  <!-- ===== main pane ===== -->
+  <rect x="30" y="42" width="420" height="480" rx="6" fill="#ffffff" stroke="#999"/>
+  <rect x="30" y="42" width="420" height="480" rx="6" fill="#fff" stroke="#cccccc"/>
+
+  <!-- header -->
+  <rect x="48" y="62" width="34" height="34" rx="3" fill="#eceef0" stroke="#c6c6c6"/>
+  <rect x="56" y="68" width="18" height="22" rx="2" fill="#cfd4d8"/>
+  <text x="94" y="78" class="name">iPod Classic</text>
+  <text x="94" y="96" class="m">Video 5th gen · 512 GB</text>
+  <circle cx="368" cy="74" r="4" fill="#45a05a"/><text x="378" y="78" class="conn">Connected</text>
+
+  <!-- storage -->
+  <rect x="48" y="120" width="384" height="10" fill="#ececec" stroke="#d8d8d8"/>
+  <rect x="48" y="120" width="96" height="10" fill="#4d8cc7"/>
+  <text x="48" y="150" class="m">43.8 GB used of 512 GB · 2,584 songs</text>
+  <text x="48" y="168" class="m">Last synced: Entire Library · today 15:25</text>
+
+  <line x1="30" y1="190" x2="450" y2="190" stroke="#e6e6e6"/>
+
+  <!-- profile + settings, flowing (no "Sync" header) -->
+  <text x="48" y="216" class="h">Profile</text>
+  <text x="432" y="216" text-anchor="end" class="link">⚙ Sync settings</text>
+  <rect x="48" y="226" width="384" height="26" rx="3" fill="#fff" stroke="#bbb"/>
+  <text x="60" y="243" class="t">Entire Library</text>
+  <text x="420" y="243" class="m">▾</text>
+  <text x="48" y="274" class="m">2,584 songs · 43.8 GB · 3 playlists</text>
+
+  <rect x="48" y="292" width="384" height="32" rx="3" fill="#4d8cc7" stroke="#2e6aa8"/>
+  <text x="240" y="313" text-anchor="middle" class="btn">Sync</text>
+
+  <!-- Details block (quiet, on-screen) -->
+  <line x1="30" y1="348" x2="450" y2="348" stroke="#e6e6e6"/>
+  <text x="48" y="372" class="sec">DETAILS</text>
+  <text x="48" y="396" class="k">Model</text>     <text x="180" y="396" class="t">iPod Video (5th gen)</text>
+  <text x="48" y="416" class="k">Capacity</text>  <text x="180" y="416" class="t">512 GB</text>
+  <text x="48" y="436" class="k">Firmware</text>  <text x="180" y="436" class="t">1.1.2</text>
+  <text x="48" y="456" class="k">Serial</text>    <text x="180" y="456" class="t">9C7X1A2B3C4D</text>
+  <text x="48" y="476" class="k">Format</text>    <text x="180" y="476" class="t">iTunesDB</text>
+
+  <text x="48" y="504" class="good">everything stays on one calm pane; only advanced settings live behind ⚙</text>
+
+  <!-- ===== settings sheet inset ===== -->
+  <text x="480" y="60" class="note" font-weight="700">⚙ Sync settings → sheet</text>
+  <rect x="480" y="72" width="210" height="230" rx="4" fill="#fff" stroke="#999"/>
+  <rect x="480" y="72" width="210" height="30" rx="4" fill="#efefef"/>
+  <text x="494" y="92" class="h">Sync settings</text>
+  <text x="668" y="92" class="m" text-anchor="end">✕</text>
+
+  <text x="494" y="126" class="k">Audio quality</text>
+  <rect x="494" y="134" width="182" height="24" rx="3" fill="#fff" stroke="#bbb"/>
+  <text x="504" y="150" class="t">Original (no re-encode)</text><text x="666" y="150" class="m">▾</text>
+
+  <rect x="494" y="176" width="14" height="14" rx="2" fill="#4d8cc7" stroke="#2e6aa8"/>
+  <text x="516" y="188" class="t">Resize artwork to 300px</text>
+  <rect x="494" y="200" width="14" height="14" fill="#fff" stroke="#999"/>
+  <text x="516" y="212" class="t">Full clean sync (wipe first)</text>
+  <rect x="494" y="224" width="14" height="14" fill="#fff" stroke="#999"/>
+  <text x="516" y="236" class="t">Use album artist as artist</text>
+  <rect x="494" y="248" width="14" height="14" fill="#fff" stroke="#999"/>
+  <text x="516" y="260" class="t">Normalize “feat.” artists</text>
+
+  <rect x="586" y="272" width="90" height="24" rx="3" fill="#4d8cc7" stroke="#2e6aa8"/>
+  <text x="631" y="288" text-anchor="middle" class="btn" font-size="12">Done</text>
+
+  <text x="480" y="330" class="note">Everyday: Profile + Sync on the page.</text>
+  <text x="480" y="346" class="note">Rare: bitrate / artwork / clean sync</text>
+  <text x="480" y="362" class="note">tucked in the sheet.</text>
+</svg>

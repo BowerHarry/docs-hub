@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 600" font-family="-apple-system, 'SF Pro Text', system-ui, sans-serif">
+  <style>
+    .lbl{font-size:13px;font-weight:700;fill:#333}
+    .note{font-size:11px;fill:#555}
+    .name{font-size:18px;font-weight:700;fill:#1e1e1e}
+    .meta{font-size:12px;fill:#6f6f6f}
+    .muted{font-size:11px;fill:#9a9a9a}
+    .sec{font-size:11px;font-weight:700;fill:#8a8a8a;letter-spacing:.06em}
+    .action{font-size:12px;fill:#3b7cb8;font-weight:600}
+    .type{font-size:13px;font-weight:700;fill:#222}
+    .cnt{font-size:12px;fill:#6f6f6f}
+    .size{font-size:13px;font-weight:600;fill:#1e1e1e}
+    .sub{font-size:11px;fill:#7a7a7a}
+    .subk{font-size:11px;fill:#9a9a9a}
+    .leg{font-size:10px;fill:#8a8a8a}
+    .chev{font-size:11px;fill:#9a9a9a}
+    .icon{font-size:12px;fill:#7a7a7a}
+  </style>
+  <rect width="760" height="600" fill="#f4f4f4"/>
+  <text x="30" y="26" class="lbl">B2 · MANIFEST TABLE — flat rows, expand for named groups (no item sampling)</text>
+
+  <rect x="30" y="40" width="700" height="544" rx="6" fill="#fff" stroke="#cccccc"/>
+  <rect x="31" y="41" width="698" height="40" fill="#f0f0f0"/>
+  <line x1="30" y1="81" x2="730" y2="81" stroke="#cfcfcf"/>
+  <text x="662" y="66" text-anchor="end" class="action">✎ Edit</text>
+  <text x="708" y="66" text-anchor="end" class="muted" font-size="14">⋯</text>
+
+  <!-- header -->
+  <text x="52" y="116" class="name">Weekend Mix</text>
+  <text x="52" y="137" class="meta">Synced to iPod Classic · updated today</text>
+
+  <!-- composition bar (hero) -->
+  <rect x="52" y="156" width="656" height="14" rx="3" fill="#ececec" stroke="#d8d8d8"/>
+  <rect x="52" y="156" width="382" height="14" fill="#4d8cc7"/>
+  <rect x="434" y="156" width="238" height="14" fill="#9aa0a6"/>
+  <rect x="672" y="156" width="36" height="14" fill="#6f6f6f"/>
+  <text x="52" y="188" class="leg" fill="#4d8cc7">■ Music 8.2 GB</text>
+  <text x="150" y="188" class="leg" fill="#9aa0a6">■ Photos 5.1 GB</text>
+  <text x="252" y="188" class="leg" fill="#6f6f6f">■ Videos 0.8 GB</text>
+  <text x="708" y="188" text-anchor="end" class="meta" font-weight="700" fill="#1e1e1e">14.1 GB total</text>
+
+  <!-- manifest table -->
+  <text x="52" y="220" class="sec">CONTENTS</text>
+  <rect x="52" y="230" width="656" height="200" rx="3" fill="#fff" stroke="#e0e0e0"/>
+
+  <!-- MUSIC row (expanded) -->
+  <text x="66" y="258" class="chev">▾</text>
+  <text x="86" y="258" class="icon">♪</text>
+  <text x="108" y="258" class="type">Music</text>
+  <text x="180" y="258" class="cnt">1,234 songs · 142 albums</text>
+  <text x="694" y="258" text-anchor="end" class="size">8.2 GB</text>
+  <!-- expansion: named/bounded groups only -->
+  <text x="108" y="280" class="subk">Playlists</text>
+  <text x="180" y="280" class="sub">Road Trip · Chill Sunday · Focus · Gym</text>
+  <text x="108" y="298" class="subk">Added directly</text>
+  <text x="180" y="298" class="sub">138 albums · 3 artists · 40 songs</text>
+  <line x1="52" y1="318" x2="708" y2="318" stroke="#eee"/>
+
+  <!-- PHOTOS row (collapsed) -->
+  <text x="66" y="346" class="chev">▸</text>
+  <text x="86" y="346" class="icon">▣</text>
+  <text x="108" y="346" class="type">Photos</text>
+  <text x="180" y="346" class="cnt">320 photos · 8 albums</text>
+  <text x="694" y="346" text-anchor="end" class="size">5.1 GB</text>
+  <line x1="52" y1="366" x2="708" y2="366" stroke="#eee"/>
+
+  <!-- VIDEOS row (collapsed) -->
+  <text x="66" y="394" class="chev">▸</text>
+  <text x="86" y="394" class="icon">▶</text>
+  <text x="108" y="394" class="type">Videos</text>
+  <text x="180" y="394" class="cnt">12 videos</text>
+  <text x="694" y="394" text-anchor="end" class="size">0.8 GB</text>
+  <line x1="52" y1="414" x2="708" y2="414" stroke="#eee"/>
+
+  <!-- total -->
+  <text x="108" y="440" class="cnt" font-weight="700" fill="#1e1e1e">Total on device</text>
+  <text x="694" y="440" text-anchor="end" class="size">14.1 GB</text>
+
+  <text x="52" y="484" class="note">No item sampling. Each media type is one aligned row (count + size); expand to see the</text>
+  <text x="52" y="500" class="note">*named, bounded* groups it's built from — playlists, photo albums, the video list — plus</text>
+  <text x="52" y="516" class="note">aggregate counts for the bulk. To change any of it → Edit.</text>
+  <text x="52" y="540" class="note" fill="#2e7d32" font-weight="700">Fixes: flat utilitarian table (not floating cards) · shows structure, not a misleading 10-item peek.</text>
+</svg>

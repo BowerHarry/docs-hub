@@ -22,6 +22,12 @@ Classic iPods still have a devoted following, but syncing them on a modern Mac m
 | --- | --- | --- |
 | ![The Music library scoped to one sync profile, with the profile's playlists, artists and album grid, and one album open to show its tracks](images/clickwheel-profile-editor.png) | ![The device screen part-way through a sync to the iPod nano, with a progress bar at 58% and the track being copied](images/clickwheel-sync-in-progress.png) | ![The device screen for an iPod Video connected through the wireless bridge, with its storage, details and sync profile](images/clickwheel-wireless-device.png) |
 
+| The whole library | Album details |
+| --- | --- |
+| ![The Music library as a full-width grid of album covers, with the playlist and artist panes hidden](images/clickwheel-library.png) | ![The Music library with one album open: its track list below the grid, and an info sidebar showing the selected track's details and cover](images/clickwheel-library-info.png) |
+| **Profile dashboard** | **Song list** |
+| ![A sync profile's dashboard: its albums in Cover Flow, its playlists, a backup, recent syncs and the iPod it is assigned to](images/clickwheel-profile-dashboard.png) | ![The Music library as a flat song list with title, artist, album, time and rating columns](images/clickwheel-song-list.png) |
+
 ## The wireless bridge
 
 The bridge is custom hardware, designed from scratch.

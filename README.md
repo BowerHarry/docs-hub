@@ -110,6 +110,6 @@ flowchart LR
 
 ## How these are built
 
-Every project here is spec-driven and built with AI coding agents, with the whole codebase reviewed before release.
+Every project here is spec-driven and built with AI coding agents at a granular level, with the whole codebase entirely human reviewed before release.
 
 > Source for any project is available on request, and I'm happy to walk through any of it.

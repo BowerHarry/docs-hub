@@ -1,6 +1,6 @@
 # TheBridge
 
-Ultra-miniature wireless sync bridge for legacy iPod Nano using ESP32-S3 USB OTG host.
+Ultra-miniature wireless sync bridge for legacy Classic iPods using ESP32-S3 USB OTG host.
 Runtime hostname and mDNS service remain `ipodbridge.local`.
 
 ## Architecture Overview

@@ -1,6 +1,7 @@
 # Yellow Sticker
 
 **[yellowsticker.uk](https://www.yellowsticker.uk)** · same-day standing-ticket alerts for **London West End** theatre. 
+
 Subscribers are notified by **email** or **Telegram** when official box-office pages show standing availability — you always buy from the venue, at normal public prices.
 
 > **Status:** Live in production · [yellowsticker.uk](https://www.yellowsticker.uk)  

@@ -1,6 +1,7 @@
 # docs-hub
 
-**Seven private projects, documented in public.** A Mac app that brings classic iPods back to life, the custom hardware that syncs them over Wi-Fi, an iPad app for reviewing code by hand, a puzzle game and a live ticket-alert service. The source is private; each page below shows what the project does, how it is built and where it has got to.
+**Private projects, documented in public.** 
+A Mac app that brings classic iPods back to life, the custom hardware that syncs them over Wi-Fi, an iPad app for reviewing code by hand, a puzzle game and a live ticket-alert service. The source is private; each page below shows what the project does, how it is built and where it has got to.
 
 <p align="center">
   <a href="click-wheel/README.md">ClickWheel</a> ·

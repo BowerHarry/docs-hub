@@ -47,7 +47,7 @@ The per-production price is read from the `PRICE_PER_PRODUCTION_GBP_PENCE` secre
 
 ### Supabase (`supabase/`)
 
-- **Database** — see [`DATABASE.md`](DATABASE.md). Row-level security is on for every table; the browser can read `productions` and nothing else.
+- **Database** — see `docs-internal/DATABASE.md`. Row-level security is on for every table; the browser can read `productions` and nothing else.
 - **Edge functions** (Deno). All are deployed with `verify_jwt = false`, so each one does its own authorisation:
 
   | Function | Who calls it | Authorised by | What it does |
@@ -61,15 +61,15 @@ The per-production price is read from the `PRICE_PER_PRODUCTION_GBP_PENCE` secre
   | `status-dashboard` | FAQ, `/monitor` | public for the check schedule; admin credentials for everything else | Health snapshot: per-show state, monitor heartbeat, database size, email usage, Stripe activity |
   | `admin-auth` | `/monitor` | admin credentials | Login check for the dashboard |
   | `admin-preview-cancel` | `/monitor` | admin credentials | Read-only preview of what cancelling a subscription would do |
-  | `admin-test-fixture` | `/monitor` | admin credentials | Drives a hidden `test-fixture` production through the alert flow. See [`TESTING.md`](TESTING.md) |
+  | `admin-test-fixture` | `/monitor` | admin credentials | Drives a hidden `test-fixture` production through the alert flow. See `docs-internal/TESTING.md` |
   | `admin-create-production` | `/monitor` | admin credentials | Adds or updates a production and uploads its poster |
   | `send-test-email` | `/monitor` | admin credentials | Sends each email template with stub data |
 
-Stripe test and live mode are chosen by the `STRIPE_SECRET_KEY` prefix; see [`STRIPE_MODES.md`](STRIPE_MODES.md).
+Stripe test and live mode are chosen by the `STRIPE_SECRET_KEY` prefix; see `docs-internal/STRIPE_MODES.md`.
 
 ### The monitor (`firefox-extension/`)
 
-A WebExtension that runs in Firefox on an always-on machine. See [`firefox-extension/README.md`](https://github.com/BowerHarry/YellowSticker/blob/main/firefox-extension/README.md) for setup.
+A WebExtension that runs in Firefox on an always-on machine. See `firefox-extension/README.md` for setup.
 
 Each cycle (every 10 minutes by default, within configurable active hours) it:
 

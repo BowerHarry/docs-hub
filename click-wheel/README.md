@@ -32,10 +32,13 @@ Classic iPods still have a devoted following, but syncing them on a modern Mac m
 
 The bridge is custom hardware, designed from scratch.
 
-<!-- TODO: photo of the prototype next to an iPod, plus the PCB render. -->
-![The ESP32 wireless bridge prototype](images/clickwheel-bridge.jpg)
+<img src="images/clickwheel-bridge.jpg" width="420" alt="The hand-soldered bridge prototype: a XIAO ESP32-S3 board wired to a 30-pin dock connector, with three resistors and a capacitor">
 
-- **Hardware:** a Seeed XIAO ESP32-S3 on a four-layer PCB with a 30-pin dock connector, an accessory-identification resistor, a TVS diode for protection and a status LED. Designed in EasyEDA, prototyped and hand-soldered.
+| PCB, top | PCB, bottom |
+| --- | --- |
+| ![3D render of the top of the bridge PCB, annotated: the 30-pin connector pads, the XIAO ESP32-S3 Plus footprint, a 100 µF capacitor and the status LED](images/clickwheel-pcb-top.png) | ![3D render of the bottom of the bridge PCB, annotated: the 30-pin connector pads, the 68 kΩ accessory resistor, the protection diode and a small capacitor](images/clickwheel-pcb-bottom.png) |
+
+- **Hardware:** a Seeed XIAO ESP32-S3 wired to the iPod's 30-pin dock connector, with a 68 kΩ accessory-identification resistor, a TVS diode for protection and a status LED. The working prototype is hand-soldered; a PCB about 25 mm square, designed in EasyEDA, is being prepared for manufacture.
 - **Firmware:** the ESP32 talks to the iPod over the dock connector's USB lines and exposes a small HTTP API (status, device, find, upload, delete).
 - **Discovery:** the Mac app finds the bridge over Bonjour (`_ipodbridge._tcp`) and polls it for a mounted iPod.
 - **Status:** working prototype. It syncs wirelessly to an iPod Video and the 1st to 3rd-generation iPod nano when powered externally. Drawing power from the iPod itself is the next problem to solve.

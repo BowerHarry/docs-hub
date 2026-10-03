@@ -9,6 +9,8 @@ Welcome to my central documentation hub. While the source code for these project
 * [**libpodbridgesupport**](./libpodbridgesupport/README.md) - LibPodBridgeSupport is a small Swift package that encapsulates ESP32 iPod bridge discovery and API access.
 * [**TheBridge**](./the-bridge/README.md) - Ultra-miniature wireless sync bridge for legacy iPods.
 ---
+* [**Yellow Sticker**](./yellow-sticker/README.md) - Same-day standing-ticket alerts for London West End theatre
+---
 * [**Iterate**](./iterate/README.md) - Read and review code on iPad with Apple Pencil
 ---
 * [**Sliq**](./sliq/README.md) - Challenging tile-based puzzle game for iOS

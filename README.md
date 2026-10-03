@@ -25,7 +25,7 @@ Classic iPods still work, but nothing modern syncs them well. These four project
 | --- | --- | --- | --- |
 | [**ClickWheel**](click-wheel/README.md) | Native Mac app with a retro iTunes-inspired interface and per-device sync profiles, over USB or Wi-Fi. | Swift, SwiftUI, macOS | In development |
 | [**libsyncsupport**](libsyncsupport/README.md) | Sync engine that writes the iTunesDB format in Swift, verified on real iPod hardware. | Swift package, ffmpeg | In development |
-| [**TheBridge**](the-bridge/README.md) | ESP32-S3 accessory on a custom four-layer PCB that plugs into the iPod's 30-pin port for wireless sync. | ESP32-S3, ESP-IDF, EasyEDA | Working prototype |
+| [**TheBridge**](the-bridge/README.md) | ESP32-S3 accessory that plugs into the iPod's 30-pin port for wireless sync, with a custom four-layer PCB. | ESP32-S3, ESP-IDF, EasyEDA | Working prototype, PCB designed |
 | [**libpodbridgesupport**](libpodbridgesupport/README.md) | Swift package that finds TheBridge on the network and talks to its HTTP API. | Swift package, Bonjour | In development |
 
 How they fit together:
@@ -56,7 +56,26 @@ flowchart LR
   </tr>
 </table>
 
-<!-- TODO(Harry): add a photo of TheBridge PCB plugged into an iPod here once one exists in the TheBridge docs folder. -->
+### TheBridge: the hardware
+
+A classic iPod only syncs over its dock connector, so TheBridge puts a Wi-Fi computer on the end of it. A Seeed Studio XIAO ESP32-S3 acts as a USB host, mounts the iPod's disk through the 30-pin port, and serves it to the Mac over a small HTTP API. A 68 kΩ resistor on the accessory pin makes the iPod treat it as a charge-and-sync accessory.
+
+The hand-soldered proof of concept works end to end on external 5V power. A PCB about 25 mm square has been designed in EasyEDA and is being prepared for manufacture; running the bridge from the iPod's own power is the remaining open problem.
+
+<table>
+  <tr>
+    <td width="34%"><a href="the-bridge/README.md"><img src="the-bridge/images/bridge-prototype.jpg" alt="The hand-soldered proof of concept: a XIAO ESP32-S3 board wired to a 30-pin dock connector, with three resistors and a capacitor"></a></td>
+    <td width="33%"><a href="the-bridge/README.md"><img src="the-bridge/images/pcb-top.png" alt="3D render of the top of the PCB, annotated: the 30-pin connector pads, the XIAO ESP32-S3 Plus footprint, a 100 µF capacitor and the LED"></a></td>
+    <td width="33%"><a href="the-bridge/README.md"><img src="the-bridge/images/pcb-bottom.png" alt="3D render of the bottom of the PCB, annotated: the 30-pin connector pads, the 68 kΩ accessory resistor, the protection diode and a small capacitor"></a></td>
+  </tr>
+  <tr>
+    <td align="center">Hand-soldered proof of concept</td>
+    <td align="center">PCB design, top</td>
+    <td align="center">PCB design, bottom</td>
+  </tr>
+</table>
+
+The schematic, routed layout, component list and dock-connector wiring are on the [TheBridge page](the-bridge/README.md).
 
 ---
 

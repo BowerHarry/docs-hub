@@ -117,6 +117,17 @@ curl "http://ipodbridge.local/device"
 {"vid":"0x05ac","pid":"0x1201","serial":"...","product":"iPod","manufacturer":"Apple"}
 ```
 
+## GET /logs
+
+Returns recent firmware log output as plain text (oldest first), captured from `ESP_LOG` into an in-memory ring buffer (`THEBRIDGE_LOG_BUF_SIZE`, default 8 KB). Useful when the USB port is in host mode and no serial console is available. Does not require the iPod to be mounted.
+
+The first line is a header: `uptime_ms` since boot, `dropped` lines skipped due to contention, and `truncated=yes` once older output has been overwritten.
+
+**Example**
+```bash
+curl http://ipodbridge.local/logs
+```
+
 ## POST /sink (benchmarks only)
 
 Consumes request body without writing to disk. Use this to measure raw Wi‑Fi upload throughput.

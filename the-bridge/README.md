@@ -46,24 +46,55 @@ Runtime hostname and mDNS service remain `ipodbridge.local`.
 ✓ **Dual Personality** - Simultaneous Wi-Fi station + USB host modes
 ✓ **Atomic USB Handshake** - iPod auto-enters "Do Not Disconnect" when connected
 
-## Hardware Setup
+## Hardware
+
+**Status:** the hand-soldered proof of concept works end to end with external 5V power. A PCB has been designed in EasyEDA and is being prepared for manufacture. Running the bridge from the iPod's own power is the remaining open problem.
+
+### Proof of concept
+
+<img src="images/bridge-prototype.jpg" width="420" alt="The hand-soldered proof of concept: a XIAO ESP32-S3 board wired to a 30-pin dock connector, with three resistors and a capacitor">
+
+A Seeed Studio XIAO ESP32-S3 wired directly to a 30-pin dock connector.
+
+### PCB
+
+The board is about 25 mm square, with the XIAO soldered flat onto one side and the 30-pin connector along one edge.
+
+| Top | Bottom |
+| --- | --- |
+| ![3D render of the top of the PCB, annotated: the 30-pin connector pads, the XIAO ESP32-S3 Plus footprint, a 100 µF capacitor and the LED](images/pcb-top.png) | ![3D render of the bottom of the PCB, annotated: the 30-pin connector pads, the 68 kΩ accessory resistor, the protection diode and a small capacitor](images/pcb-bottom.png) |
+
+![Schematic: the XIAO ESP32-S3 Plus connected to the 30-pin iPod connector through the USB data and power pins, with the accessory resistor, protection diode, two capacitors and an addressable LED](images/schematic.png)
+
+![Routed PCB layout around the 30-pin connector, showing the USB data pair, the 5V and 3.3V traces and the ground pour](images/pcb-layout.png)
 
 ### Components
-- **Seeed Studio XIAO ESP32-S3** (with USB OTG capability)
-- **iPod Nano** (any generation with USB dock)
-- **USB-C OTG Splitter** (for 5V power injection during testing)
-- **3.7V LiPo Battery + 5V Boost Converter** (for production 1-inch form factor)
 
-### Pinout
-```
-ESP32-S3 USB OTG Pins (Test Configuration):
-  Pin 1 (USB D-) → iPod Pin 4 (D-)
-  Pin 2 (USB D+) → iPod Pin 5 (D+)
-  GND            → iPod Pin 1-3 (GND)
-  5V (from USB)  → iPod Pin 30 (5V)
-```
+| Ref | Part | Purpose |
+| --- | --- | --- |
+| U2 | Seeed Studio XIAO ESP32-S3 Plus | Wi-Fi and USB host |
+| U1 | 30-pin iPod dock connector (male) | Plugs into the iPod |
+| R2 | 68 kΩ resistor | On the accessory-indicator pin, so the iPod treats the bridge as a charge-and-sync accessory |
+| D2 | SMAJ28A TVS diode | Protection against voltage spikes |
+| C1 | 100 µF capacitor | Bulk power buffer |
+| C | 10 µF ceramic capacitor | Small power buffer |
+| LED1 | SK6812-EC3210F addressable LED | Status light, driven from D2 (not yet used by the firmware) |
 
-### Testing Setup
+### Dock connector wiring
+
+| 30-pin connector | Signal | Connects to |
+| --- | --- | --- |
+| 1, 2, 11, 15, 16, 29, 30 | GND | Ground |
+| 18 | 3.3V | 3.3V rail (XIAO `3V3`), through D2 |
+| 21 | Accessory indicator | R2 (68 kΩ) to ground |
+| 23 | USB 5V | XIAO `VUSB` |
+| 25 | USB D− | XIAO `D-` |
+| 27 | USB D+ | XIAO `D+` |
+
+### Testing setup
+
+For bench testing, a USB-C OTG splitter supplies 5V to both the XIAO and the iPod:
+
 ```
 Mac USB Port
     ↓
@@ -226,19 +257,12 @@ Causes:
 3. Monitor serial for authentication details
 4. Ensure Mac is on same Wi-Fi network
 
-## Power Management (1-Inch Form Factor)
+## Power
 
-### Testing Configuration
-- USB-C OTG splitter provides 5V for both ESP32-S3 and iPod
-- Suitable for desk/lab testing
+- **Today:** the bridge needs external 5V, shared with the iPod through the test splitter above.
+- **Goal:** draw power from the iPod through the dock connector, so the bridge needs no supply of its own. This does not work yet.
 
-### Production Configuration
-- **Battery:** 3.7V LiPo (500-1000 mAh)
-- **Boost Converter:** 5V @ 1A output (e.g., MT3608 or similar)
-- **Regulator:** 3.3V for ESP32-S3 (built-in on XIAO)
-- **Duration:** ~2-4 hours per full LiPo charge
-
-### Power States
+### Power states
 - **Idle:** ~40-60 mA (Wi-Fi + USB idle)
 - **Streaming:** ~200-250 mA (Wi-Fi + USB active)
 

@@ -129,6 +129,6 @@ The schematic, routed layout, component list and dock-connector wiring are on th
 
 ## How these are built
 
-Every project here is spec-driven and built with AI coding agents at a granular level, with the whole codebase entirely human reviewed before release.
+Spec-driven projects, built with AI coding agents and fully reviewed before release.
 
 > Source for any project is available on request, and I'm happy to walk through any of it.
